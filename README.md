@@ -4,9 +4,9 @@ relié à une sonde Si7021 de récupérer la température et l'humidité relativ
 d'une pièce.
 
 ## **Sommaire**
-- [HomeBridge](#homebridge)
+- [HomeBridge](#meteor---homebridge)
   - [Installation](#installation)
-  - [Lancement du programme](#lancement-prog)
+  - [Lancement du programme](#lancement-du-programme)
 
 ## **Présentation**
 Le programme MeteoR pour HomeBridge va récupérer les données de température et
