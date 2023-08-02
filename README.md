@@ -1,7 +1,7 @@
 # MeteoR - HomeBridge
 Ce programme, écrit en Python 3, permet au travers d'un Raspberry Pi
-relié à une sonde Si7021 et un écran SSD1306, de récupérer la température et
-l'humidité relative ambiante d'une pièce.
+relié à une sonde Si7021 de récupérer la température et l'humidité relative
+d'une pièce.
 
 ## **Sommaire**
 - [HomeBridge](#homebridge)
@@ -11,7 +11,7 @@ l'humidité relative ambiante d'une pièce.
 ## **Présentation**
 Le programme MeteoR pour HomeBridge va récupérer les données de température et
 d'hygrométrie, afin de les transmettre au travers d'un serveur web local à un
-module HomeBridge, pour offrir la compatibilité HomeKit.
+module HomeBridge, offrant ainsi la compatibilité HomeKit à la sonde.
 
 ## **Installation**
 Il faut tout d'abord installer HomeBridge sur le Raspberry, dont les indications
