@@ -4,17 +4,20 @@ relié à une sonde Si7021 de récupérer la température et l'humidité relativ
 d'une pièce.
 
 ## **Sommaire**
-- [HomeBridge](#meteor---homebridge)
-  - [Installation](#installation)
-  - [Lancement du programme](#lancement-du-programme)
+- [Meteor pour HomeBridge](#meteor---homebridge)
+  - [Installation d'HomeBridge](#installation-dhomebridge)
+  - [Installation du programme](#installation-du-programme)
+    - [\[Recommandé\] Docker](#recommandé-docker)
+    - [Manuelle](#manuelle)
+      - [Dépendances](#dépendances)
+      - [Lancement du programme](#lancement-du-programme)
 
 ## **Présentation**
 Le programme MeteoR pour HomeBridge va récupérer les données de température et
 d'hygrométrie, afin de les transmettre au travers d'un serveur web local à un
 module HomeBridge, offrant ainsi la compatibilité HomeKit à la sonde.
 
-## **Installation**
-### HomeBridge
+## **Installation d'HomeBridge**
 Il faut tout d'abord installer HomeBridge sur le Raspberry, dont les indications
 sont fournies sur la page suivante :
 * [HomeBridge - Install HomeBridge on Raspbian](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Raspbian)  
@@ -24,7 +27,8 @@ d'administration, les plugins :
 * [HomeBridge HTTP Temperature sensor](https://github.com/Supereg/homebridge-http-temperature-sensor#readme)
 * [HomeBridge HTTP Humidity sensor](https://github.com/Supereg/homebridge-http-humidity-sensor#readme)
 
-### Docker
+## **Installation du programme**
+### [Recommandé] Docker
 Un fichier *Dockerfile* est fourni afin de simplifier l'installation du
 programme.
 Pour le compiler l'image, il suffit de lancer la commande :
@@ -36,6 +40,8 @@ Puis de lancer le container :
 ```shell
 docker run  -d --restart unless-stopped --device /dev/i2c-1 -p 0.0.0.0:8080:8080 meteor-hb:latest
 ```
+
+---
 
 ### Manuelle
 #### Dépendances
@@ -49,6 +55,10 @@ Soit en installant manuellement chaque module :
 * adafruit_si7021
 ```shell
   pip install adafruit-circuitpython-si7021
+```
+* RPi.GPIO
+```shell
+  pip install RPi.GPIO
 ```
 * web
 ```shell
