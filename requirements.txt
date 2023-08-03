@@ -1,2 +1,3 @@
 adafruit-circuitpython-si7021
+RPi.GPIO
 web.py
