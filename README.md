@@ -20,7 +20,8 @@ module HomeBridge, offrant ainsi la compatibilité HomeKit à la sonde.
 ## **Installation d'HomeBridge**
 Il faut tout d'abord installer HomeBridge sur le Raspberry, dont les indications
 sont fournies sur la page suivante :
-* [HomeBridge - Install HomeBridge on Raspbian](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Raspbian)  
+* [HomeBridge - Install HomeBridge on Raspbian](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Raspbian)
+<br>
 
 Une fois celui-ci installé, il est nécessaire d'ajouter, grâce à l'interface
 d'administration, les plugins :
@@ -31,14 +32,15 @@ d'administration, les plugins :
 ### [Recommandé] Docker
 Un fichier *Dockerfile* est fourni afin de simplifier l'installation du
 programme.
-Pour le compiler l'image, il suffit de lancer la commande :
+Pour compiler l'image, il suffit de lancer la commande :
 ```shell
 docker build -t meteor-hb:latest .
 ```
+<br>
 
 Puis de lancer le container :
 ```shell
-docker run  -d --restart unless-stopped --device /dev/i2c-1 -p 0.0.0.0:8080:8080 meteor-hb:latest
+docker run -d -it --restart unless-stopped --device /dev/i2c-1 -p 0.0.0.0:8080:8080 meteor-hb:latest
 ```
 
 ---
@@ -50,9 +52,10 @@ utilisant le fichier des dépendances mis à disposition :
 ```shell
 pip install -r requirements.txt
 ```
+<br>
 
 Soit en installant manuellement chaque module :
-* adafruit_si7021
+* Adafruit_si7021
 ```shell
   pip install adafruit-circuitpython-si7021
 ```
@@ -60,14 +63,15 @@ Soit en installant manuellement chaque module :
 ```shell
   pip install RPi.GPIO
 ```
-* web
+* Web
 ```shell
   pip install web.py
 ```
+<br>
 
 #### Lancement du programme
 Une fois l'installation terminée, il ne reste plus qu'à lancer le programme à
 l'aide de la commande :
 ```shell
-python homeBridge_Si7021.py
+python meteor-hb.py
 ```

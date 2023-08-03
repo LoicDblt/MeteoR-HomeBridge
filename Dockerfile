@@ -14,4 +14,4 @@ COPY --from=builder /root/.local /root/.local
 ADD /src .
 
 EXPOSE 8080:8080
-CMD ["python", "homeBridge_Si7021.py"]
+CMD python meteor-hb.py
